@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "eceefee8-ff24-4ab0-a88e-3f0e8b9ab0fa",
+		"name": "Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autentificacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdUsuario\":\"jminaya\",\r\n    \"Contrasena\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44319/api/Autentificacion",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"Autentificacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orden\":\r\n    {\r\n            \"Cliente\":\"Pedro\",\r\n            \"Total\":182.5,\r\n            \"Asesor\":\"JM\"\r\n    },\r\n    \"ordenDetalle\":\r\n    [\r\n        {\r\n            \"Producto\":\"Azucar\",\r\n            \"Cantidad\":5,\r\n            \"Monto\":20.5\r\n        },\r\n        {\r\n            \"Producto\":\"Arroz\",\r\n            \"Cantidad\":9,\r\n            \"Monto\":162.0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44319/api/orden",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"orden"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Orden",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJqbWluYXlhIiwibmJmIjoxNjc2MjQzMjUzLCJleHAiOjE2NzYyNTc2NTMsImlhdCI6MTY3NjI0MzI1M30.EauQeDFof5G4CBvZZLRVyfeIQYRhf5SoSyJtitsvyLw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44319/api/orden/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"orden",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Ordenes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orden\":\r\n    {\r\n            \"Cliente\":\"Pedro\",\r\n            \"Total\":182.5,\r\n            \"Asesor\":\"JM\"\r\n    },\r\n    \"ordenDetalle\":\r\n    [\r\n        {\r\n            \"Producto\":\"Azucar\",\r\n            \"Cantidad\":5,\r\n            \"Monto\":20.5\r\n        },\r\n        {\r\n            \"Producto\":\"Arroz\",\r\n            \"Cantidad\":9,\r\n            \"Monto\":162.0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44319/api/orden",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"orden"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Asesor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdAsesor\":1,\r\n    \"Nombre\":\"Josue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44319/api/asesor",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"asesor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Asesores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44319/api/asesor",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"asesor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Asesor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44319/api/asesor/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"asesor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Asesor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44319/api/asesor/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"asesor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar asesor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdAsesor\":1,\r\n    \"Nombre\":\"Jjjjosue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44319/api/asesor",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44319",
+					"path": [
+						"api",
+						"asesor"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJqbWluYXlhIiwibmJmIjoxNjc2MjU4ODU4LCJleHAiOjE2NzYyNzMyNTgsImlhdCI6MTY3NjI1ODg1OH0.Xp7vnaqhmOrLzALitmYFOGxlqaupbYCCMAY3H2pBajM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
